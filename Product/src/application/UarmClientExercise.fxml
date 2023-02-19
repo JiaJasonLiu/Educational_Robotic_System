@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="678.0" prefWidth="670.0"
+	style="-fx-background-color: #BCBCBC;" stylesheets="@application.css"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.UArmClientExerciseController">
+	<top>
+		<VBox prefHeight="159.0" prefWidth="670.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<BorderPane prefHeight="157.0" prefWidth="670.0"
+					style="-fx-background-color: #FFFFFF;"
+					stylesheets="@application.css">
+					<center>
+						<GridPane prefHeight="125.0" prefWidth="670.0"
+							BorderPane.alignment="CENTER">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES"
+									minWidth="10.0" prefWidth="100.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints maxHeight="110.0"
+									minHeight="10.0" prefHeight="101.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="202.0"
+									minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<VBox prefHeight="93.0" prefWidth="670.0">
+									<children>
+										<JFXTextArea fx:id="taExercise" editable="false"
+											prefHeight="92.0" prefWidth="670.0" promptText="Exercise"
+											wrapText="true" />
+
+									</children>
+								</VBox>
+								<VBox prefHeight="64.0" prefWidth="670.0"
+									GridPane.rowIndex="1">
+									<children>
+										<HBox prefHeight="53.0" prefWidth="670.0">
+											<children>
+												<JFXButton fx:id="bt_Back"
+													onAction="#btBack_Clicked" prefHeight="77.0"
+													prefWidth="205.0" styleClass="button-raised"
+													stylesheets="@application.css" text="Back"
+													textFill="#2196f3">
+													<font>
+														<Font name="Arial Bold" size="16.0" />
+													</font>
+													<HBox.margin>
+														<Insets left="10.0" />
+													</HBox.margin>
+												</JFXButton>
+												<JFXButton fx:id="bt_Next"
+													onAction="#btNext_Clicked" prefHeight="77.0"
+													prefWidth="205.0" styleClass="button-raised"
+													stylesheets="@application.css" text="Next"
+													textFill="#2196f3">
+													<font>
+														<Font name="Arial Bold" size="16.0" />
+													</font>
+													<HBox.margin>
+														<Insets left="243.0" />
+													</HBox.margin>
+												</JFXButton>
+											</children>
+											<VBox.margin>
+												<Insets />
+											</VBox.margin>
+										</HBox>
+									</children>
+								</VBox>
+							</children>
+						</GridPane>
+					</center>
+				</BorderPane>
+			</children>
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+		</VBox>
+	</top>
+	<center>
+		<VBox fx:id="bpClient" prefHeight="494.0" prefWidth="670.0"
+			BorderPane.alignment="CENTER">
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+		</VBox>
+	</center>
+</BorderPane>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="206.0" prefWidth="570.0"
+	style="-fx-background-color: #FFFFFF;" stylesheets="@application.css"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.EditExerciseController">
+	<center>
+		<GridPane prefHeight="480.0" prefWidth="664.0"
+			BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="569.0" minWidth="10.0" prefWidth="561.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="357.0" minWidth="0.0" prefWidth="8.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<VBox prefHeight="200.0" prefWidth="100.0">
+					<children>
+						<Label text="Editing in Progress">
+							<font>
+								<Font size="34.0" />
+							</font>
+							<VBox.margin>
+								<Insets left="156.0" />
+							</VBox.margin>
+						</Label>
+						<HBox prefHeight="74.0" prefWidth="522.0">
+							<VBox.margin>
+								<Insets bottom="5.0" left="20.0" right="20.0" top="20.0" />
+							</VBox.margin>
+							<children>
+								<ChoiceBox fx:id="cbType" prefHeight="44.0"
+									prefWidth="110.0" />
+								<Label prefHeight="48.0" prefWidth="18.0" text=":">
+									<font>
+										<Font size="20.0" />
+									</font>
+									<HBox.margin>
+										<Insets />
+									</HBox.margin>
+								</Label>
+								<JFXTextArea fx:id="taExercise" prefHeight="96.0"
+									prefWidth="477.0">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</JFXTextArea>
+							</children>
+						</HBox>
+						<HBox>
+							<children>
+								<JFXButton fx:id="btSave" buttonType="RAISED"
+									onAction="#btSave_clicked" prefHeight="50.0" prefWidth="87.0"
+									styleClass="button-raised" text="Save">
+									<font>
+										<Font size="20.0" />
+									</font>
+									<effect>
+										<Lighting>
+											<bumpInput>
+												<Shadow />
+											</bumpInput>
+											<light>
+												<Light.Distant color="BLACK" />
+											</light>
+										</Lighting>
+									</effect>
+									<HBox.margin>
+										<Insets left="120.0" />
+									</HBox.margin>
+								</JFXButton>
+								<JFXButton fx:id="btCancel" buttonType="RAISED"
+									onAction="#btCancel_clicked" prefHeight="50.0" prefWidth="87.0"
+									styleClass="button-raised" text="Cancel">
+									<font>
+										<Font size="20.0" />
+									</font>
+									<effect>
+										<Lighting>
+											<bumpInput>
+												<Shadow />
+											</bumpInput>
+											<light>
+												<Light.Distant color="BLACK" />
+											</light>
+										</Lighting>
+									</effect>
+									<HBox.margin>
+										<Insets left="10.0" />
+									</HBox.margin>
+								</JFXButton>
+							</children>
+							<VBox.margin>
+								<Insets bottom="5.0" left="70.0" right="10.0" top="4.0" />
+							</VBox.margin>
+						</HBox>
+					</children>
+				</VBox>
+			</children>
+		</GridPane>
+	</center>
+</BorderPane>

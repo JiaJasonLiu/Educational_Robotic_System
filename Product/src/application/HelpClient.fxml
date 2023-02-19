@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="519.0" prefWidth="858.0"
+	style="-fx-background-color: FFFFFF;"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.HelpController">
+	<center>
+		<AnchorPane prefHeight="200.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<VBox layoutX="-283.0" prefHeight="506.0" prefWidth="521.0"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="0.0">
+					<children>
+						<Label text="Information">
+							<VBox.margin>
+								<Insets left="10.0" right="10.0" top="5.0" />
+							</VBox.margin>
+							<font>
+								<Font name="Candara Light" size="40.0" />
+							</font>
+						</Label>
+						<Separator prefHeight="12.0" prefWidth="118.0">
+							<VBox.margin>
+								<Insets right="50.0" top="-10.0" />
+							</VBox.margin>
+						</Separator>
+						<GridPane prefHeight="425.0" prefWidth="521.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES"
+									minWidth="10.0" prefWidth="100.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints maxHeight="134.0" minHeight="7.0"
+									prefHeight="27.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="340.0"
+									minHeight="10.0" prefHeight="210.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="131.0" minHeight="0.0"
+									prefHeight="25.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="195.0" minHeight="0.0"
+									prefHeight="165.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="57.0" minHeight="0.0"
+									prefHeight="2.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<Label
+									text="Before you start you should understand the following:">
+									<font>
+										<Font name="System Bold" size="17.0" />
+									</font>
+								</Label>
+								<Label prefHeight="206.0" prefWidth="513.0"
+									text="- As you have seen from the application all of the steps that you are suppose to&#10;add are in mm, which would be refering to movement in millimeters.&#10;- When you press the add (+) button that will automatiacly add that certain step&#10;to the list on the left&#10;- If the Arm twitchs, please close the program and run it again. This is beacuse the &#10;information is connected, but there seem to be something wrong with the steps&#10;- If the Arm goes completely down and then comes back up. It means that it is&#10;re-calibrating&#10;- If the Application isn't working or isn't responding, it might mean that you have &#10;input too much information. Please try to close App or unplug and plug the usb.&#10;"
+									GridPane.rowIndex="1">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</Label>
+								<Label text="Uses of buttons:" GridPane.rowIndex="2">
+									<font>
+										<Font name="System Bold" size="17.0" />
+									</font>
+								</Label>
+								<Label prefHeight="176.0" prefWidth="513.0"
+									text="- Editing a step, select the step added to the list and then click the edit button&#10;below the list&#10;- Reset button: resets the position of the arm&#10;- Grab button: activates a pump that is used to grab an item&#10;- Save As button: saves a text document of your steps&#10;- Open button: opens a saved text document of your steps&#10;- Email button: send all your information in this application to someone else&#10;There would be a log of your steps in your folder you installed this application in"
+									GridPane.rowIndex="3">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</Label>
+							</children>
+							<VBox.margin>
+								<Insets left="10.0" top="-10.0" />
+							</VBox.margin>
+						</GridPane>
+						<HBox>
+							<VBox.margin>
+								<Insets left="160.0" top="5.0" />
+							</VBox.margin>
+						</HBox>
+					</children>
+				</VBox>
+			</children>
+		</AnchorPane>
+	</center>
+	<right>
+		<AnchorPane prefHeight="506.0" prefWidth="327.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<GridPane prefHeight="419.0" prefWidth="335.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES"
+							minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="160.0" minHeight="7.0"
+							prefHeight="160.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="242.0" minHeight="0.0"
+							prefHeight="34.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="373.0" minHeight="0.0"
+							prefHeight="129.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="373.0" minHeight="10.0"
+							prefHeight="95.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Label text="Steps:" GridPane.rowIndex="1">
+							<font>
+								<Font name="System Bold" size="23.0" />
+							</font>
+						</Label>
+						<Label prefHeight="118.0" prefWidth="332.0"
+							text="1. Type a number you want the arm to move in &#10;in the stated directions, then press the &quot;+&quot;&#10;button to add to the list on the left&#10;2. Press Run to make the Arm move&#10;3. If you want to pick something up, press the &quot;Grab&quot;&#10; button"
+							GridPane.rowIndex="2">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<Label text="HAVE FUN!!!" GridPane.rowIndex="3">
+							<font>
+								<Font name="Britannic Bold" size="40.0" />
+							</font>
+						</Label>
+					</children>
+				</GridPane>
+			</children>
+		</AnchorPane>
+	</right>
+</BorderPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="232.0" prefWidth="450.0"
+	style="-fx-background-color: #FFFFFF;" stylesheets="@application.css"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.ExerciseMainController">
+	<center>
+		<GridPane BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES"
+					minWidth="10.0" prefWidth="100.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints maxHeight="107.0" minHeight="10.0"
+					prefHeight="54.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="202.0" minHeight="10.0"
+					prefHeight="178.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<VBox prefHeight="200.0" prefWidth="100.0" />
+				<Label text="Try and Complete the EXERCISES">
+					<font>
+						<Font name="System Bold" size="21.0" />
+					</font>
+					<GridPane.margin>
+						<Insets left="60.0" />
+					</GridPane.margin>
+				</Label>
+				<VBox prefHeight="200.0" prefWidth="100.0"
+					GridPane.rowIndex="1">
+					<children>
+						<HBox prefHeight="79.0" prefWidth="450.0">
+							<children>
+								<JFXButton fx:id="btTry" onAction="#btTry_clicked"
+									prefHeight="82.0" prefWidth="429.0" styleClass="button-raised"
+									stylesheets="@application.css" text="Try" textFill="#2196f3">
+									<font>
+										<Font name="Arial Bold" size="16.0" />
+									</font>
+									<HBox.margin>
+										<Insets left="10.0" />
+									</HBox.margin>
+								</JFXButton>
+							</children>
+							<VBox.margin>
+								<Insets bottom="10.0" />
+							</VBox.margin>
+						</HBox>
+						<HBox prefHeight="75.0" prefWidth="450.0">
+							<children>
+								<JFXButton fx:id="btBack" onAction="#btBack_clicked"
+									prefHeight="78.0" prefWidth="80.0" styleClass="button-raised"
+									stylesheets="@application.css" text="Back" textFill="#2196f3">
+									<font>
+										<Font name="Arial Bold" size="16.0" />
+									</font>
+									<HBox.margin>
+										<Insets left="10.0" right="20.0" />
+									</HBox.margin>
+								</JFXButton>
+								<JFXButton fx:id="btImExport"
+									onAction="#btImExport_clicked" prefHeight="77.0"
+									prefWidth="329.0" styleClass="button-raised"
+									stylesheets="@application.css" text="Import/Export Exercises"
+									textFill="#2196f3">
+									<font>
+										<Font name="Arial Bold" size="16.0" />
+									</font>
+								</JFXButton>
+							</children>
+							<VBox.margin>
+								<Insets top="5.0" />
+							</VBox.margin>
+						</HBox>
+					</children>
+				</VBox>
+			</children>
+		</GridPane>
+	</center>
+</BorderPane>

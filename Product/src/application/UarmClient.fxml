@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="510.0" prefWidth="655.0" style="-fx-background-color: #BCBCBC;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UArmClientController">
+	<center>
+		<GridPane prefHeight="415.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="NEVER" maxWidth="317.0" minWidth="10.0" prefWidth="288.0" />
+				<ColumnConstraints hgrow="ALWAYS" maxWidth="377.0" minWidth="10.0" prefWidth="356.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<VBox prefHeight="533.0" prefWidth="288.0">
+					<children>
+						<JFXListView fx:id="lvSteps" onMouseClicked="#lvSteps_clicked" prefHeight="381.0" prefWidth="276.0">
+							<VBox.margin>
+								<Insets bottom="1.0" left="6.0" right="6.0" top="6.0" />
+							</VBox.margin>
+						</JFXListView>
+						<VBox prefHeight="122.0" prefWidth="274.0" styleClass="card" stylesheets="@application.css">
+							<VBox.margin>
+								<Insets bottom="7.0" left="7.0" right="7.0" top="2.0" />
+							</VBox.margin>
+							<children>
+								<HBox prefHeight="58.0" prefWidth="232.0">
+									<children>
+										<JFXButton fx:id="btEdit" onAction="#btEdit_clicked" prefHeight="41.0" prefWidth="106.0" styleClass="button-raised" stylesheets="@application.css" text="Edit">
+											<HBox.margin>
+												<Insets left="5.0" />
+											</HBox.margin>
+										</JFXButton>
+										<JFXButton fx:id="btDelete" onAction="#btDelete_clicked" prefHeight="41.0" prefWidth="106.0" styleClass="button-raised" stylesheets="@application.css" text="Delete">
+											<HBox.margin>
+												<Insets left="9.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets bottom="-5.0" left="2.0" right="-5.0" top="-5.0" />
+									</VBox.margin>
+								</HBox>
+								<JFXButton fx:id="btClear" onAction="#btClear_clicked" prefHeight="40.0" prefWidth="225.0" styleClass="button-raised" stylesheets="@application.css" text="Clear">
+									<VBox.margin>
+										<Insets left="5.0" />
+									</VBox.margin>
+								</JFXButton>
+							</children>
+						</VBox>
+					</children>
+				</VBox>
+				<VBox prefHeight="200.0" prefWidth="292.0" GridPane.columnIndex="1">
+					<children>
+						<VBox prefHeight="506.0" prefWidth="364.0" styleClass="card" stylesheets="@application.css">
+							<children>
+								<HBox>
+									<children>
+										<JFXButton fx:id="btHelp" onAction="#btHelp_clicked" prefHeight="43.0" prefWidth="35.0" styleClass="button-raised" stylesheets="@application.css" text="?">
+											<HBox.margin>
+												<Insets top="-11.0" />
+											</HBox.margin>
+										</JFXButton>
+										<JFXButton fx:id="btHome" onAction="#btHome_clicked" prefHeight="43.0" prefWidth="35.0" styleClass="button-raised" stylesheets="@application.css" text="⌂">
+											<HBox.margin>
+												<Insets left="5.0" top="-11.0" />
+											</HBox.margin>
+										</JFXButton>
+										<Label text="UarmClient">
+											<font>
+												<Font name="Britannic Bold" size="35.0" />
+											</font>
+											<HBox.margin>
+												<Insets left="8.0" top="9.0" />
+											</HBox.margin>
+										</Label>
+										<JFXButton fx:id="btEmail" onAction="#btEmail_clicked" prefHeight="45.0" prefWidth="68.0" styleClass="button-raised" stylesheets="@application.css" text="Email">
+											<HBox.margin>
+												<Insets left="30.0" right="-20.0" top="-10.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets left="-15.0" top="-5.0" />
+									</VBox.margin>
+								</HBox>
+								<Label text="Movement">
+									<font>
+										<Font name="Times New Roman Italic" size="25.0" />
+									</font>
+									<VBox.margin>
+										<Insets left="100.0" top="2.0" />
+									</VBox.margin>
+								</Label>
+								<HBox>
+									<VBox.margin>
+										<Insets left="6.0" top="15.0" />
+									</VBox.margin>
+									<children>
+										<JFXTextField fx:id="tfLeft" labelFloat="true" prefHeight="52.0" prefWidth="70.0" promptText="Left">
+											<font>
+												<Font size="20.0" />
+											</font>
+										</JFXTextField>
+										<Label prefHeight="45.0" prefWidth="48.0" text="mm">
+											<font>
+												<Font size="19.0" />
+											</font>
+											<HBox.margin>
+												<Insets top="10.0" />
+											</HBox.margin>
+										</Label>
+										<JFXButton fx:id="btAddL" onAction="#btAddL_clicked" prefHeight="42.0" prefWidth="29.0" styleClass="button-raised" stylesheets="@application.css" text="+">
+											<HBox.margin>
+												<Insets top="5.0" />
+											</HBox.margin>
+										</JFXButton>
+										<JFXTextField fx:id="tfRight" labelFloat="true" prefHeight="52.0" prefWidth="75.0" promptText="Right">
+											<font>
+												<Font size="20.0" />
+											</font>
+											<HBox.margin>
+												<Insets left="65.0" />
+											</HBox.margin>
+										</JFXTextField>
+										<Label prefHeight="45.0" prefWidth="48.0" text="mm">
+											<font>
+												<Font size="19.0" />
+											</font>
+											<HBox.margin>
+												<Insets top="10.0" />
+											</HBox.margin>
+										</Label>
+										<JFXButton fx:id="btAddR" onAction="#btAddR_clicked" prefHeight="42.0" prefWidth="29.0" styleClass="button-raised" stylesheets="@application.css" text="+">
+											<HBox.margin>
+												<Insets top="5.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+								</HBox>
+								<HBox>
+									<children>
+										<JFXTextField fx:id="tfFront" labelFloat="true" prefHeight="52.0" prefWidth="70.0" promptText="Front">
+											<font>
+												<Font size="20.0" />
+											</font>
+										</JFXTextField>
+										<Label prefHeight="45.0" prefWidth="48.0" text="mm">
+											<font>
+												<Font size="19.0" />
+											</font>
+											<HBox.margin>
+												<Insets top="10.0" />
+											</HBox.margin>
+										</Label>
+										<JFXButton fx:id="btAddF" onAction="#btAddF_clicked" prefHeight="42.0" prefWidth="29.0" styleClass="button-raised" stylesheets="@application.css" text="+">
+											<HBox.margin>
+												<Insets top="5.0" />
+											</HBox.margin>
+										</JFXButton>
+										<JFXTextField fx:id="tfBack" labelFloat="true" prefHeight="52.0" prefWidth="75.0" promptText="Back">
+											<font>
+												<Font size="20.0" />
+											</font>
+											<HBox.margin>
+												<Insets left="65.0" />
+											</HBox.margin>
+										</JFXTextField>
+										<Label prefHeight="45.0" prefWidth="48.0" text="mm">
+											<font>
+												<Font size="19.0" />
+											</font>
+											<HBox.margin>
+												<Insets top="10.0" />
+											</HBox.margin>
+										</Label>
+										<JFXButton fx:id="btAddB" onAction="#btAddB_clicked" prefHeight="42.0" prefWidth="29.0" styleClass="button-raised" stylesheets="@application.css" text="+">
+											<HBox.margin>
+												<Insets top="5.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets left="6.0" top="15.0" />
+									</VBox.margin>
+								</HBox>
+								<HBox>
+									<children>
+										<JFXTextField fx:id="tfUp" labelFloat="true" prefHeight="52.0" prefWidth="70.0" promptText="Up">
+											<font>
+												<Font size="20.0" />
+											</font>
+										</JFXTextField>
+										<Label prefHeight="45.0" prefWidth="48.0" text="mm">
+											<font>
+												<Font size="19.0" />
+											</font>
+											<HBox.margin>
+												<Insets top="10.0" />
+											</HBox.margin>
+										</Label>
+										<JFXButton fx:id="btAddU" onAction="#btAddU_clicked" prefHeight="42.0" prefWidth="29.0" styleClass="button-raised" stylesheets="@application.css" text="+">
+											<HBox.margin>
+												<Insets top="5.0" />
+											</HBox.margin>
+										</JFXButton>
+										<JFXTextField fx:id="tfDown" labelFloat="true" prefHeight="52.0" prefWidth="75.0" promptText="Down">
+											<font>
+												<Font size="20.0" />
+											</font>
+											<HBox.margin>
+												<Insets left="65.0" />
+											</HBox.margin>
+										</JFXTextField>
+										<Label prefHeight="45.0" prefWidth="48.0" text="mm">
+											<font>
+												<Font size="19.0" />
+											</font>
+											<HBox.margin>
+												<Insets top="10.0" />
+											</HBox.margin>
+										</Label>
+										<JFXButton fx:id="btAddD" onAction="#btAddD_clicked" prefHeight="42.0" prefWidth="29.0" styleClass="button-raised" stylesheets="@application.css" text="+">
+											<HBox.margin>
+												<Insets top="5.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets left="6.0" top="15.0" />
+									</VBox.margin>
+								</HBox>
+								<HBox prefHeight="58.0" prefWidth="315.0">
+									<children>
+										<JFXButton fx:id="btReset" onAction="#btReset_clicked" prefHeight="47.0" prefWidth="151.0" styleClass="button-raised" stylesheets="@application.css" text="Reset">
+											<HBox.margin>
+												<Insets bottom="6.0" top="3.0" />
+											</HBox.margin>
+										</JFXButton>
+										<JFXButton fx:id="btGrab" onAction="#btGrab_clicked" prefHeight="48.0" prefWidth="155.0" styleClass="button-raised" stylesheets="@application.css" text="Grab">
+											<HBox.margin>
+												<Insets bottom="6.0" left="10.0" right="12.0" top="3.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets top="20.0" />
+									</VBox.margin>
+								</HBox>
+								<HBox />
+								<HBox prefHeight="48.0" prefWidth="323.0">
+									<children>
+										<JFXButton fx:id="btSaveAs" onAction="#btSaveAs_clicked" prefHeight="48.0" prefWidth="150.0" styleClass="button-raised" stylesheets="@application.css" text="Save As" />
+										<JFXButton fx:id="btOpen" onAction="#btOpen_clicked" prefHeight="48.0" prefWidth="150.0" styleClass="button-raised" stylesheets="@application.css" text="Open">
+											<HBox.margin>
+												<Insets left="10.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets top="5.0" />
+									</VBox.margin>
+								</HBox>
+								<HBox prefHeight="62.0" prefWidth="323.0">
+									<children>
+										<JFXButton fx:id="btRun" onAction="#btRun_clicked" prefHeight="53.0" prefWidth="309.0" styleClass="button-raised" stylesheets="@application.css" text="Run">
+											<HBox.margin>
+												<Insets top="4.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets top="7.0" />
+									</VBox.margin>
+								</HBox>
+							</children>
+							<VBox.margin>
+								<Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+							</VBox.margin>
+						</VBox>
+					</children>
+				</VBox>
+			</children>
+		</GridPane>
+	</center>
+</BorderPane>

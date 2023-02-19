@@ -1,0 +1,4 @@
+The jars in this file are the libraries that I used in my application to successfully fulfill the 
+success criteria and meet the needs of the client
+
+The other files are samples that can be opened by the application.

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="584.0" prefWidth="758.0"
+	style="-fx-background-color: #BCBCBC;" stylesheets="@application.css"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.ImExportExerciseController">
+	<center>
+		<GridPane prefHeight="593.0" prefWidth="758.0"
+			BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="ALWAYS" maxWidth="758.0"
+					minWidth="10.0" prefWidth="758.0" />
+				<ColumnConstraints hgrow="ALWAYS" maxWidth="377.0"
+					minWidth="0.0" prefWidth="0.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints maxHeight="296.0" minHeight="10.0"
+					prefHeight="276.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="359.0" minHeight="10.0"
+					prefHeight="308.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<VBox prefHeight="273.0" prefWidth="274.0"
+					GridPane.rowIndex="1">
+					<children>
+						<JFXListView fx:id="lvExercises"
+							onMouseClicked="#lvExercises_clicked" prefHeight="185.0"
+							prefWidth="742.0">
+							<VBox.margin>
+								<Insets bottom="1.0" left="6.0" right="6.0" />
+							</VBox.margin>
+						</JFXListView>
+						<VBox prefHeight="124.0" prefWidth="740.0" styleClass="card"
+							stylesheets="@application.css">
+							<VBox.margin>
+								<Insets bottom="7.0" left="7.0" right="7.0" top="2.0" />
+							</VBox.margin>
+							<children>
+								<HBox prefHeight="58.0" prefWidth="0.0">
+									<children>
+										<JFXButton fx:id="btEdit" onAction="#btEdit_clicked"
+											prefHeight="40.0" prefWidth="342.0"
+											styleClass="button-raised" stylesheets="@application.css"
+											text="Edit">
+											<HBox.margin>
+												<Insets left="5.0" />
+											</HBox.margin>
+										</JFXButton>
+										<JFXButton fx:id="btDelete"
+											onAction="#btDelete_clicked" prefHeight="40.0"
+											prefWidth="342.0" styleClass="button-raised"
+											stylesheets="@application.css" text="Delete">
+											<HBox.margin>
+												<Insets left="20.0" right="5.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets bottom="-5.0" left="2.0" right="-5.0"
+											top="-5.0" />
+									</VBox.margin>
+								</HBox>
+								<JFXButton fx:id="btClear" onAction="#btClear_clicked"
+									prefHeight="45.0" prefWidth="714.0" styleClass="button-raised"
+									stylesheets="@application.css" text="Clear">
+									<VBox.margin>
+										<Insets left="5.0" />
+									</VBox.margin>
+								</JFXButton>
+							</children>
+						</VBox>
+					</children>
+					<GridPane.margin>
+						<Insets bottom="-1.0" />
+					</GridPane.margin>
+				</VBox>
+				<VBox prefHeight="283.0" prefWidth="200.0">
+					<children>
+						<VBox prefHeight="278.0" prefWidth="742.0" styleClass="card"
+							stylesheets="@application.css">
+							<children>
+								<HBox>
+									<children>
+										<JFXButton fx:id="btBack" onAction="#btBack_clicked"
+											prefHeight="40.0" prefWidth="83.0" styleClass="button-raised"
+											stylesheets="@application.css" text="Back">
+											<HBox.margin>
+												<Insets top="-10.0" />
+											</HBox.margin>
+										</JFXButton>
+										<Label text="Importing/Exporting Exercises">
+											<font>
+												<Font name="Britannic Bold" size="35.0" />
+											</font>
+											<HBox.margin>
+												<Insets left="65.0" top="9.0" />
+											</HBox.margin>
+										</Label>
+									</children>
+									<VBox.margin>
+										<Insets left="-15.0" top="-5.0" />
+									</VBox.margin>
+								</HBox>
+								<Label text="Add Exercise">
+									<font>
+										<Font name="Times New Roman Italic" size="25.0" />
+									</font>
+									<VBox.margin>
+										<Insets left="280.0" top="2.0" />
+									</VBox.margin>
+								</Label>
+								<HBox prefHeight="126.0" prefWidth="714.0">
+									<children>
+										<ChoiceBox fx:id="cbType" accessibleText="w"
+											prefHeight="42.0" prefWidth="101.0">
+											<HBox.margin>
+												<Insets top="10.0" />
+											</HBox.margin>
+										</ChoiceBox>
+										<JFXTextArea fx:id="taExercise" prefHeight="77.0"
+											prefWidth="563.0" />
+										<JFXButton fx:id="btAdd" onAction="#btAdd_clicked"
+											prefHeight="81.0" prefWidth="46.0" styleClass="button-raised"
+											stylesheets="@application.css" text="+">
+											<HBox.margin>
+												<Insets top="5.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets top="20.0" />
+									</VBox.margin>
+								</HBox>
+								<HBox />
+								<HBox prefHeight="48.0" prefWidth="323.0">
+									<VBox.margin>
+										<Insets top="5.0" />
+									</VBox.margin>
+								</HBox>
+								<HBox prefHeight="62.0" prefWidth="323.0">
+									<children>
+										<JFXButton fx:id="btExport"
+											onAction="#btExport_clicked" prefHeight="40.0"
+											prefWidth="339.0" styleClass="button-raised"
+											stylesheets="@application.css" text="Export">
+											<HBox.margin>
+												<Insets top="4.0" />
+											</HBox.margin>
+										</JFXButton>
+										<JFXButton fx:id="btimport"
+											onAction="#btImport_clicked" prefHeight="40.0"
+											prefWidth="339.0" styleClass="button-raised"
+											stylesheets="@application.css" text="Import">
+											<HBox.margin>
+												<Insets left="14.0" top="4.0" />
+											</HBox.margin>
+										</JFXButton>
+									</children>
+									<VBox.margin>
+										<Insets top="7.0" />
+									</VBox.margin>
+								</HBox>
+							</children>
+							<VBox.margin>
+								<Insets bottom="3.0" left="6.0" right="6.0" top="6.0" />
+							</VBox.margin>
+						</VBox>
+					</children>
+				</VBox>
+			</children>
+		</GridPane>
+	</center>
+</BorderPane>

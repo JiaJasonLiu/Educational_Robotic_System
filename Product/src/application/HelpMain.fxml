@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="297.0" prefWidth="525.0"
+	style="-fx-background-color: FFFFFF;" stylesheets="@application.css"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.HelpController">
+	<center>
+		<AnchorPane prefHeight="200.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<VBox prefHeight="415.0" prefWidth="525.0"
+					AnchorPane.bottomAnchor="-26.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<children>
+						<Label text="Welcome to the uArm Client">
+							<VBox.margin>
+								<Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+							</VBox.margin>
+							<font>
+								<Font name="Candara Light" size="40.0" />
+							</font>
+						</Label>
+						<Separator prefHeight="35.0" prefWidth="503.0">
+							<VBox.margin>
+								<Insets top="-10.0" />
+							</VBox.margin>
+						</Separator>
+						<Label prefHeight="241.0" prefWidth="513.0"
+							text="- On the left is where you can just practice with the uArm Client,&#10;If you have any problems with the uArm Client there will be a &quot;?&quot; with information&#10;that you might need&#10;- On the right is where you can try and complete the exercises that are given by &#10;your teacher, or created by someone&#10;- However you will also be able to also add exercises and/or import exercises &#10;that the someone, most likely your teacher has send you&#10;- You will have to complete three different levels of difficult to finish what was &#10;assigned&#10;&#10;&#10;&#10;&#10;">
+							<font>
+								<Font size="14.0" />
+							</font>
+							<VBox.margin>
+								<Insets left="5.0" top="-30.0" />
+							</VBox.margin>
+						</Label>
+					</children>
+				</VBox>
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>
